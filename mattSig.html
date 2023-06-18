@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Email Signature</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <style>
+            :root {
+                --primary: #193b1e;
+                --secondary: #e4f0df;
+                --purp-accent: #572cb5;
+                --pink-accent: #ce4760;
+            }
+            html {
+                font-size: 100%;
+            }
+            body {
+                margin: 0;
+            }
+            .wrapper {
+                box-sizing: border-box;
+                background-color: var(--secondary);
+                width: 100%;
+                max-height: 200px;
+                background-image: url(./images/logo11.svg);
+                background-blend-mode: screen;
+                background-position: center;
+                border-left: 3px solid var(--primary);
+                border-right: 3px solid var(--primary);
+                border-bottom: 3px solid var(--primary);
+            }
+            h1 {
+                margin: .5rem 0 0 .5rem;
+                text-align: left;
+                font-size: 4rem;
+                letter-spacing: -.2rem;
+                font-family: 'Dancing Script',cursive;
+                color: var(--primary);
+                width: 100%;
+                user-select: none;
+            }
+            h2 {
+                margin: 2.7rem 0 0;
+                font-family:Prata,sans-serif;
+                letter-spacing: .15rem;
+                color: var(--purp-accent);
+            }
+            h2:hover {
+                color: var(--pink-accent);
+                margin-right: .5rem;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            h3 {
+                margin: 0 .5rem 0 0;
+                letter-spacing: .1rem;
+                font-family:'Indie Flower',sans-serif;
+                color: var(--purp-accent);
+                font-size: 1.5rem;
+                width: fit-content;
+            }
+            h3:hover {
+                margin-left: .5rem;
+                color: var(--pink-accent);
+            }
+            img {
+                height: 95px;
+                width: 95px;
+                border-radius: 50px;
+                user-select: none;
+            }
+            .container {
+                display: flex;
+                padding: .5rem;
+            }
+            .outerContainer {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+            .roles {
+                padding: .5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            .mouse-trail {
+                position: fixed;
+                pointer-events: none;
+            }
+            .mouse-trail img {
+                width: 10px;
+                height: 10px;
+            }
+            @media only screen and (max-width: 600px) and (orientation:portrait) {
+                h1 {
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+                h2  {
+                    font-size: 1rem;
+                }
+                h3 {
+                    font-size: 1rem;
+                }
+                .outerContainer {
+                    display: revert;
+                    margin-top: 1.7rem;
+                }
+                .container {
+                    flex-direction: column-reverse;
+                }
+                .wrapper {
+                    display: flex;
+                }
+            }
+        </style>
+        <script>
+            // Defer font loading
+            window.addEventListener('load', function() {
+                var fontLink = document.createElement('link');
+                fontLink.href = 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Figtree:ital,wght@0,400;0,700;1,400;1,700&family=Indie+Flower&family=Prata&display=swap';
+                fontLink.rel = 'stylesheet';
+                document.head.appendChild(fontLink);
+            });
+            // Change signature color on hover
+            document.addEventListener('DOMContentLoaded', function() {
+                var nameElement = document.querySelector('h1');
+                nameElement.addEventListener('mouseover', function() {
+                    var colors = ['pink', '#572cb5', '#ce4760', 'blue'];
+                    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    nameElement.style.color = randomColor;
+                });
+
+                nameElement.addEventListener('mouseout', function() {
+                    nameElement.style.color = 'var(--primary)';
+                });              
+            });
+            // Create mouse-trail effect
+            document.addEventListener('mousemove', function(event) {
+                var trailElement = document.createElement('div');
+                trailElement.className = 'mouse-trail';
+                trailElement.style.top = event.clientY + 'px';
+                trailElement.style.left = event.clientX + 'px';
+
+                // Create the star image element
+                var starImage = document.createElement('img');
+                starImage.src = './images/star.png';
+                trailElement.appendChild(starImage);
+
+                document.body.appendChild(trailElement);
+
+                setTimeout(function() {
+                    document.body.removeChild(trailElement);
+                }, 50); // Remove the trail element after 50ms
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <img src="https://placehold.co/100x100" alt="Me." class="me">
+                <h1>Matthew Ford</h1>
+            </div>
+            <div class="outerContainer">
+                <div class="container">
+                    <h2><a href="https://shop.symbiotic.love" alt="Visit our store!" class="store" target="_blank" rel="noopener / noreferrerss" title="Visit Our Store!">Symbiotic Love</a></h2>
+                </div>
+                <div class="roles">
+                    <h3><a href="https://symbiotic.love" alt="Learn about us!" class="Home" target="_blank" rel="noopener / noreferrerss" title="Learn About Me!">CEO</a></h3>
+                    <h3><a href="https://github.com/SymbioticLove" alt="Visit our Github!" class="Git" target="_blank" rel="noopener / noreferrerss" title="Check Out My Portfolio!">Chief Engineer</a></h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
