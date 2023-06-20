@@ -4,9 +4,9 @@ These are samples of some email signatures made on a single HTML document. There
 <img src="./sigDesktop.png">
 <h2>Example 1 Mobile Version Mobile</h2>
 <img src="./sigMobile.png">
-<h2>Alternate Version 1 Desktop Version</h2>
+<h2>Alternate 1 Desktop Version</h2>
 <img src="./sig2Desktop.png">
-<h2>Alternate Version 1 Mobile Version Mobile</h2>
+<h2>Alternate 1 Mobile Version</h2>
 <img src="./sig2Mobile.png">
 <h2>Links</h2>
 The links on my signature point to our store, our main Github profile, and to our main site. If you're in need of a signature, we can point links wherever you need.
