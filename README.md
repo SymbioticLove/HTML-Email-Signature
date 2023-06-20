@@ -3,6 +3,7 @@ These are samples of some email signatures made on a single HTML document. There
 <h2>Example 1 Desktop Version</h2>
 <img src="./sigDesktop.png">
 <h2>Example 1 Mobile Version Mobile</h2>
+<img src="./sigMobile.png">
 <h2>Alternate 1 Desktop Version</h2>
 <img src="./sig2Desktop.png">
 <h2>Alternate 1 Mobile Version</h2>
