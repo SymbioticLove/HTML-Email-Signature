@@ -1,8 +1,8 @@
 <h1>Simple HTML Email Signature</h1>
 This is a simple email signature made on a single HTML document. There are a few Javascript functions, as well as several links. You can check it out at https://symbioticlove.github.io/HTML-Email-Signature/!
-<h2>Desktop</h2>
+<h2>Example 1 Desktop Version</h2>
 <img src="./sigDesktop.png">
-<h2>Mobile</h2>
+<h2>Example 1 Mobile Version Mobile</h2>
 <img src="./sigMobile.png">
 <h2>Links</h2>
 The links on my signature point to our store, our main Github profile, and to our main site. If you're in need of a signature, we can point links wherever you need.
